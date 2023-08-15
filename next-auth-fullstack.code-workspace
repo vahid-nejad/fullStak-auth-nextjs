@@ -10,6 +10,7 @@
     "prettier.printWidth": 100,
     "window.zoomLevel": 1,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.hover.enabled": false
   }
 }
