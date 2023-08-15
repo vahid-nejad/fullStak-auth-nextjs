@@ -8,9 +8,13 @@ const AppBar = () => {
       <Link className="transition-colors hover:text-blue-500" href={"/"}>
         Home Page
       </Link>
-      <Link className="transition-colors hover:text-blue-500" href={"/UserPost"}>
+      <Link
+        className="transition-colors hover:text-blue-500"
+        href={"/UserPost"}
+      >
         User Post Page
       </Link>
+
       <SigninButton />
     </header>
   );

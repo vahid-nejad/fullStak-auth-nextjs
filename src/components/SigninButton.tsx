@@ -1,5 +1,6 @@
 "use client";
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 import React from "react";
 
 const SigninButton = () => {
@@ -16,9 +17,12 @@ const SigninButton = () => {
     );
   }
   return (
-    <button onClick={() => signIn()} className="text-green-600 ml-auto">
+    <Link
+      className="transition-colors hover:text-blue-500 text-green-500 ml-auto"
+      href={"/signIn"}
+    >
       Sign In
-    </button>
+    </Link>
   );
 };
 
