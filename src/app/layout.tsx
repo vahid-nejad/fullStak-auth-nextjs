@@ -15,10 +15,8 @@ export default function RootLayout(props: Props) {
   return (
     <html lang="en">
       <body>
-        <Providers>
-          <AppBar />
-          {props.children}
-        </Providers>
+        <AppBar />
+        {props.children}
       </body>
     </html>
   );
