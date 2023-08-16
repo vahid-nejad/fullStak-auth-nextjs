@@ -7,9 +7,9 @@
   "settings": {
     "typescript.tsdk": "node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
-    "prettier.printWidth": 100,
-    "window.zoomLevel": 1,
-    "editor.wordWrap": "wordWrapColumn",
+    "prettier.printWidth": 75,
+    "window.zoomLevel": 2,
+    "editor.wordWrap": "on",
     "editor.fontSize": 16,
     "editor.hover.enabled": false
   }

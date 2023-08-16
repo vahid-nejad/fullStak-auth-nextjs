@@ -18,9 +18,9 @@ const SigninButton = () => {
     );
   }
   return (
-    <Button onClick={() => signIn()} className="flex gap-4 ml-auto">
+    <Link href={"/signIn"} className="flex gap-4 ml-auto text-green-600">
       Sign In
-    </Button>
+    </Link>
   );
 };
 
