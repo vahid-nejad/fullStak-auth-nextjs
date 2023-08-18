@@ -4,6 +4,7 @@ import InputBox from "./InputBox";
 import { Button } from "./Button";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 type Props = {
   className?: string;
@@ -12,16 +13,20 @@ type Props = {
 };
 
 const Login = (props: Props) => {
+  const router = useRouter();
   const userName = useRef("");
   const pass = useRef("");
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await signIn("credentials", {
+    const res = await signIn("credentials", {
       username: userName.current,
       password: pass.current,
-      redirect: true,
-      callbackUrl: props.callbackUrl ?? "http://localhost:3000",
+      redirect: false,
     });
+
+    if (!res?.error) {
+      router.push(props.callbackUrl ?? "http://localhost:3000");
+    }
   };
   return (
     <div className={props.className}>
