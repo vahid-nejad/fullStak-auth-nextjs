@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import SignInButton from "./SignInButton";
 
 const AppBar = () => {
   return (
@@ -13,6 +14,8 @@ const AppBar = () => {
       >
         DashBoard
       </Link>
+
+      <SignInButton />
     </header>
   );
 };

@@ -1,5 +1,6 @@
 import AppBar from "@/components/AppBar";
 import "./globals.css";
+import Providers from "@/components/Providers";
 
 export const metadata = {
   title: "Next-Auth Tutorial",
@@ -14,8 +15,10 @@ export default function RootLayout(props: Props) {
   return (
     <html lang="en">
       <body>
-        <AppBar />
-        {props.children}
+        <Providers>
+          <AppBar />
+          {props.children}
+        </Providers>
       </body>
     </html>
   );
